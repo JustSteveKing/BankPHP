@@ -126,6 +126,9 @@ class BankTest extends TestCase
 
         $this->assertArrayHasKey('queries', $stats = $this->database->getStats());
         $this->assertArrayHasKey('total_time', $stats);
+
+        dump($stats);
+        die();
     }
 
     public function test_multiple_queries_get_logged_in_statistics()
